@@ -24,7 +24,10 @@ menv-commerce-app/
 │
 ├── server/               # Node.js backend
 │   ├── config/           # Mongoose connection config
+<< features/backend
 |   ├── seed/             # seed product for mongodb (e.g., seedproduct.js)
+=======
+>>>> main
 │   ├── controllers/      # Business logic (e.g., productController.js)
 │   ├── models/           # MongoDB models (e.g., productModel.js)
 │   ├── routes/           # Express routes (e.g., productRoutes.js)
@@ -150,8 +153,8 @@ menv-commerce-app/
 
 - [Mark Velasquez](https://github.com/MCVelasquez45)
 - [Wayne Beckom](https://github.com/beckomw)
-- [Contributor 3](#)
-- [Contributor 4](#)
+- [Justin Breazeale](https://github.com/JustinBreazeale)
+- [Hunter Motko](#)
 
 ---
 
