@@ -24,7 +24,10 @@ menv-commerce-app/
 │
 ├── server/               # Node.js backend
 │   ├── config/           # Mongoose connection config
-|   ├── seed              # Seed products.js
+<< features/backend
+|   ├── seed/             # seed product for mongodb (e.g., seedproduct.js)
+=======
+>>>> main
 │   ├── controllers/      # Business logic (e.g., productController.js)
 │   ├── models/           # MongoDB models (e.g., productModel.js)
 │   ├── routes/           # Express routes (e.g., productRoutes.js)
