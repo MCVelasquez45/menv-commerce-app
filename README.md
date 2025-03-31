@@ -4,7 +4,7 @@
 The **MENV Commerce App** is a full-stack e-commerce application built using **MongoDB**, **Express**, **Node.js**, and **Vue.js**. The application allows users to browse products through a clean, responsive user interface, while product data is served via a secure RESTful API connected to a MongoDB database.
 
 ---
-```
+
 ## 📁 Project Structure
 
 ```
