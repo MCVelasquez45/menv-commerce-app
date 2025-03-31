@@ -1,6 +1,3 @@
-Got it! Here's the **entire response formatted in proper Markdown**, ready to **copy and paste directly into your `README.md` file on GitHub**:
-
-```markdown
 # MENV Commerce App
 
 ## 🛒 Overview
