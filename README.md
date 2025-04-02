@@ -149,7 +149,7 @@ menv-commerce-app/
 ## 👥 Contributors
 
 - [Mark Velasquez](https://github.com/MCVelasquez45)
-- [Wayne Beckom](https://github.com/beckomw)
+- [Nichole Harrison](https://github.com/nicholeharrison1985)
 - [Justin Breazeale](https://github.com/JustinBreazeale)
 - [Hunter Motko](https://github.com/hunterMotko)
 
