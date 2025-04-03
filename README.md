@@ -153,7 +153,7 @@ menv-commerce-app/
 - [Nichole Harrison](https://github.com/nicholeharrison1985)
 - [Justin Breazeale](https://github.com/JustinBreazeale)
 - [Hunter Motko](https://github.com/hunterMotko)
-
+ [Wayne Beckom](https://github.com/beckomw)
 ---
 
 ## 📜 License
