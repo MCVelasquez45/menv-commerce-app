@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db'); 
 const productRoutes = require('./routes/productRoute');
+const checkoutRoute = require('./routes/checkoutRoute'); // Import the checkout route
 
 
 dotenv.config();
@@ -13,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use('/api/products', productRoutes);
-
+app.use('/api/checkout', checkoutRoute); // Use the checkout route
 
 // Start DB + Server
 const startServer = async () => {
