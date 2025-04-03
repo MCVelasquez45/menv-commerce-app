@@ -75,6 +75,7 @@ menv-commerce-app/
    ```env
    PORT=5000
    MONGODB_URI=mongodb://localhost:27017/menv-commerce
+   SEED=true
    ```
 4. Start the backend server:
    ```bash
