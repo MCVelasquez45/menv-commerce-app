@@ -68,7 +68,7 @@ button.btn {
   font-size: 0.9rem;
   padding: 0.4rem 0.75rem;
   border-radius: 8px;
-  transition: background 0.2s;
+  transition: backgroucdnd 0.2s;
   color: #111;
   background-color: #f8f9fa;
 }
