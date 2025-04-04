@@ -18,11 +18,7 @@
       <h2 class="section-title text-center mb-5">Featured Products</h2>
       <div class="main-layout">
         <div class="product-grid">
-          <div
-            v-for="product in featuredProducts"
-            :key="product.id"
-            class="card h-100 product-card"
-          >
+          <div v-for="product in featuredProducts" :key="product.id" class="card h-100 product-card">
             <img :src="require(`@/assets/${product.image}`)" class="card-img-top" :alt="product.name" />
             <div class="card-body">
               <h5 class="card-title">{{ product.name }}</h5>
@@ -33,6 +29,20 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Sell with us -->
+    <section id="sell" class="deals-section container text-center py-5">
+      <h2 class="section-title mb-3">Sell With Us</h2>
+      <p class="mb-3">Get the price the you deserve for you sneakers</p>
+
+      <button id="show-modal" @click="showModal = true" class="btn btn-success">
+        Sell Sneakers
+      </button>
+      <Teleport to="body">
+        <!-- use the modal component, pass in the prop -->
+        <ModalForm :show="showModal" :verb="'Create'" @close="showModal = false" />
+      </Teleport>
     </section>
 
     <!-- Sneaker Deals -->
@@ -60,12 +70,14 @@
 <script>
 import Navbar from '@/components/AppNavbar.vue'
 import Footer from '@/components/AppFooter.vue'
+import ModalForm from '@/components/ModalForm.vue'
 
 export default {
   name: 'LandingPage',
   components: {
     Navbar,
-    Footer
+    Footer,
+    ModalForm
   },
   data() {
     return {
@@ -91,14 +103,15 @@ export default {
           image: 'nike-shoes.jpg',
           description: 'Pastel colorway perfect for spring.'
         }
-      ]
+      ],
+      showModal: false
     };
   },
   methods: {
     scrollTo(id) {
       const section = document.getElementById(id);
       if (section) section.scrollIntoView({ behavior: 'smooth' });
-    }
+    },
   }
 };
 </script>
@@ -164,9 +177,11 @@ h1 {
   flex-direction: column;
   transition: transform 0.2s;
 }
+
 .product-card:hover {
   transform: scale(1.02);
 }
+
 .product-card img {
   width: 100%;
   height: 200px;
@@ -174,6 +189,7 @@ h1 {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
+
 .product-card .card-body {
   flex-grow: 1;
   display: flex;
@@ -181,14 +197,17 @@ h1 {
   justify-content: space-between;
   padding: 0.75rem;
 }
+
 .product-card h5 {
   font-size: 1rem;
   margin-bottom: 0.25rem;
 }
+
 .product-card p {
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
 }
+
 .product-card button {
   background-color: #f8f9fa;
   color: #111;
@@ -199,6 +218,7 @@ h1 {
   transition: background 0.2s;
   font-size: 0.9rem;
 }
+
 .product-card button:hover {
   background-color: #ccc;
 }
@@ -210,6 +230,7 @@ h1 {
   background-size: cover;
   background-position: center;
 }
+
 .hero-content {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem;
@@ -220,6 +241,7 @@ h1 {
 .main-header {
   background-color: #000;
 }
+
 .logo {
   font-size: 1.75rem;
   font-weight: bold;
@@ -232,6 +254,7 @@ textarea.form-control {
   color: #fff;
   border: 1px solid #aba5a5;
 }
+
 .main-footer {
   font-size: 0.9rem;
   width: 100vw;

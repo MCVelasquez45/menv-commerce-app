@@ -10,7 +10,19 @@
       <div class="mt-3">
         <p class="fw-bold mb-2">${{ product.price }}</p>
         <button class="btn btn-light w-100" @click="$emit('add-to-cart', product)">
-          Add to Cart
+          add to cart
+        </button>
+      </div>
+      <div class="mt-3 actions" v-if="!product.seeded">
+        <button class="btn btn-warning w-100" @click="showModal = true">
+          Update
+        </button>
+        <Teleport to="body">
+          <!-- use the modal component, pass in the prop -->
+          <ModalForm :show="showModal" :verb="'Update'" :values="product" @close="showModal = false" />
+        </Teleport>
+        <button class="btn btn-danger w-100" @click="deleteProduct(product._id)">
+          Delete
         </button>
       </div>
     </div>
@@ -18,14 +30,35 @@
 </template>
 
 <script>
+import axios from 'axios'
+import ModalForm from './ModalForm.vue'
+
 export default {
   name: 'ProductCard',
+  components: {
+    ModalForm
+  },
   props: {
     product: {
       type: Object,
       required: true
     }
-  }
+  },
+  data() {
+    return {
+      showModal: false
+    }
+  },
+  methods: {
+    async deleteProduct(id) {
+      try {
+        const res = await axios.delete(`${process.env.VUE_APP_API}/products/delete/${id}`)
+        console.log(res)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  },
 }
 </script>
 
@@ -75,5 +108,9 @@ button.btn {
 
 button.btn:hover {
   background-color: #ccc;
+}
+
+.actions {
+  display: flex;
 }
 </style>

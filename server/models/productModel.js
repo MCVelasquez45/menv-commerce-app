@@ -6,6 +6,7 @@ const productSchema = new mongoose.Schema({
   price: { type: Number },
   description: { type: String },
   image: { type: String }, // store only filename like "jordan4.jpg"
+  seeded: Boolean
 }, {
   timestamps: true
 });
