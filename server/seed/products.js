@@ -5,6 +5,7 @@ const products = [
       price: 200,
       description: 'Classic red, black and white high-top sneaker.',
       image: 'airJordanBg.jpeg',
+      seeded: true
     },
     {
       name: 'Jordan 5 Fire Red',
@@ -12,6 +13,7 @@ const products = [
       price: 220,
       description: 'Iconic white and red Jordan 5 with #23 detail.',
       image: 'jordan-kicks.jpg',
+      seeded: true
     },
     {
       name: 'Jordan 1 Volt Gold',
@@ -19,6 +21,7 @@ const products = [
       price: 210,
       description: 'Bright yellow and neon green high-top Jordans.',
       image: 'jordan1-yellow.jpg',
+      seeded: true
     },
     {
       name: 'Jordan 4 Bred',
@@ -26,6 +29,7 @@ const products = [
       price: 225,
       description: 'Black and red Air Jordan 4 with suede upper.',
       image: 'jordan4-Black.jpg',
+      seeded: true
     },
     {
       name: 'Jordan 4 White Fire Red',
@@ -33,6 +37,7 @@ const products = [
       price: 215,
       description: 'White Jordan 4 with fire red accents.',
       image: 'jordan4.jpg',
+      seeded: true
     },
     {
       name: 'Nike Air Max 90',
@@ -40,6 +45,7 @@ const products = [
       price: 160,
       description: 'Air Max 90 with vibrant blue and pink.',
       image: 'nike-airmax.jpg',
+      seeded: true
     },
     {
       name: 'Nike Dunk High Michigan',
@@ -47,6 +53,7 @@ const products = [
       price: 180,
       description: 'Michigan Dunk colorway in blue and yellow.',
       image: 'nike-blue-yellow.jpg',
+      seeded: true
     },
     {
       name: 'Nike Air Jordan What The',
@@ -54,6 +61,7 @@ const products = [
       price: 250,
       description: 'Multicolor “What The” edition of Air Jordan.',
       image: 'nike-hightop.jpg',
+      seeded: true
     },
     {
       name: 'Nike Air Force 1 Shadow',
@@ -61,6 +69,7 @@ const products = [
       price: 140,
       description: 'Bright pastel Air Force 1 with chunky sole.',
       image: 'nike-shoes.jpg',
+      seeded: true
     },
   ];
   
