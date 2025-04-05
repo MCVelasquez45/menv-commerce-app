@@ -91,6 +91,12 @@ export default {
       } else if (this.verb === 'Update') {
         try {
           const res = await axios.put(`${process.env.VUE_APP_API}/products/update/${this.product._id}`, this.product)
+          let cart = JSON.parse(localStorage.getItem('cart'));
+          if (cart) {
+            const itemToUpdate = cart.findIndex(item => item._id === this.product._id);
+            cart.splice(itemToUpdate, 1, { ...this.product })
+          }
+          localStorage.setItem('cart', JSON.stringify(cart));
           console.log(res)
         } catch (error) {
           console.error(error)

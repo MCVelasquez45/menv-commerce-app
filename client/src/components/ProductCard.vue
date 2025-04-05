@@ -53,6 +53,13 @@ export default {
     async deleteProduct(id) {
       try {
         const res = await axios.delete(`${process.env.VUE_APP_API}/products/delete/${id}`)
+        let cart = JSON.parse(localStorage.getItem('cart'))
+        if (cart) {
+          cart = cart.filter(item => item._id == `${id}`);
+          window.alert(`🗑 Your item has been deleted.`);
+          localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        window.location.reload()
         console.log(res)
       } catch (error) {
         console.error(error)
